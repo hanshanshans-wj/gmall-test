@@ -58,4 +58,22 @@ public class UserInfoServiceImpl implements UserInfoService{
         example.createCriteria().andEqualTo("email",userInfo.getEmail());
         userInfoMapper.updateByExampleSelective(userInfo,example);
     }
+
+    @Override
+    public void delete(UserInfo userInfo) {
+    userInfoMapper.delete(userInfo);
+    }
+
+    @Override
+    public void deleteByExample() {
+        Example example = new Example(UserInfo.class);
+        example.createCriteria().andBetween("phoneNum",4000,6000);
+
+        userInfoMapper.deleteByExample(example);
+    }
+
+    @Override
+    public void deleteByPrimaryKey(String id) {
+        userInfoMapper.deleteByPrimaryKey(id);
+    }
 }

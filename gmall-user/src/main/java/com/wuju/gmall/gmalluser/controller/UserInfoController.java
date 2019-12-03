@@ -47,8 +47,21 @@ public class UserInfoController {
     public void updateUserInfo(UserInfo userInfo){
         userInfoService.updateUserInfo(userInfo);
     }
+
     @RequestMapping("updateUserInfoExample")
     public void updateUserInfoExample(UserInfo userInfo){
         userInfoService.updateUserInfoExample(userInfo);
+    }
+    @RequestMapping("delete")
+    public void delete(UserInfo userInfo){
+        userInfoService.delete(userInfo);
+    }
+    @RequestMapping("deleteByExample")
+    public void deleteByExample(){
+        userInfoService.deleteByExample();
+    }
+    @RequestMapping("deleteByPrimaryKey")
+    public void deleteByPrimaryKey(String id){
+        userInfoService.deleteByPrimaryKey(id);
     }
 }

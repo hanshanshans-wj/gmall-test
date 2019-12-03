@@ -44,5 +44,27 @@ public interface UserInfoService {
      */
     void updateUserInfo(UserInfo userInfo);
 
+    /**
+     * 根据其他条件修改
+     * @param userInfo
+     */
     void updateUserInfoExample(UserInfo userInfo);
+
+    /**
+     * 根据条件删除
+     * @param userInfo
+     */
+    void delete(UserInfo userInfo);
+
+    /**
+     * 根据属性，以及范围删除！
+     * @param
+     */
+    void deleteByExample();
+
+    /**
+     * 根据主键删除数据！
+     * @param id
+     */
+    void deleteByPrimaryKey(String id);
 }
